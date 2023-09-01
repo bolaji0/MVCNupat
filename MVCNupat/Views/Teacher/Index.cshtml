@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Teacher>
+
+<a asp-controller="Fishs" asp-action="Create">Create New Fish</a>
+<table class="table table-bordered table-striped" style="100%">
+    <thead>
+       <tr>
+            <th>
+               Teachers Name
+            </th>
+            <th>
+               Age
+            </th>
+            <th>
+                Salary
+            </th>
+       </tr>
+    </thead>
+    <tbody>
+        @foreach(var Loops in Model)
+        {
+            <tr>
+                <td style="width=50%">
+                    @Loops.TeacherName
+                </td>
+                <td style="width=50%">
+                    @Loops.Age
+                </td>
+                <td>
+                    @Loops.salary
+                </td>
+                <td>
+                    <a asp-controller="Fishs" asp-action="Update" asp-route-Id="">Update</a>
+                </td>
+                <td>
+                    <a asp-controller="Fishs" asp-action="Delete" asp-route-id="">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
