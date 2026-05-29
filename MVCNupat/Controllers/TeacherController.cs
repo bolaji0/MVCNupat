@@ -15,7 +15,7 @@ namespace MVCNupat.Controllers
 
 
         public IActionResult Index()
-        {
+        { // Ienumerable parsing
             IEnumerable<Teacher> getTeach = _db.Teachers;
             return View(getTeach);
         }
